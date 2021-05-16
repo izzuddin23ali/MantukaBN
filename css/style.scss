@@ -1,0 +1,291 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+
+.jumbotron{
+    background-color: lightblue;
+}
+
+*/
+
+.clickable{
+    cursor: pointer;
+}
+
+a{
+    color: black;
+}
+
+.navbar-brand{
+    cursor: none; /*change this*/
+}
+
+#backToTop{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#ToTop:hover{
+    background-color: rgba(0,0,0,0.8)
+}
+
+.boxShadow{
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*index*/
+
+/*
+
+#indexMain,
+#indexService,
+#indexForum,
+#indexAbout{
+    height: 100vh;
+}
+
+*/
+
+#indexMain{
+    background-image: url("/assets/index/hero monochrome blue.jpg");
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+#indexMain a{
+    color: white;
+}
+
+
+#indexService,
+#indexAbout{
+    background-color: beige;
+}
+
+#index .boxShadow{
+    margin: 10px 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#indexForum .boxShadow{
+    padding: 25px;
+}
+
+#indexAbout .boxShadow{
+    margin: 10px 0;
+    padding: 30px;
+}
+
+.indexBox img{
+    max-width: 100%;
+    height: auto;
+}
+
+#index{
+    scroll-snap-type: y mandatory;
+}
+
+#index ul{
+    padding: 0;
+}
+
+#index ul li{
+    list-style: none;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+#index ul li:nth-last-child(1){
+    border-bottom: 0px;
+}
+
+/*service*/
+
+#service .row{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#service .row .card{
+    position: relative;
+    cursor: pointer;
+}
+
+#service .row .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+#service .row .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+#service .row .card:hover .face.face1{
+    background: #ff0057;
+    transform: translateY(0);
+}
+
+#service .row .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+#service .row .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+#service .row .card .face.face1 .content img{
+    text-align: center;
+    max-width: 100px;
+}
+
+#service .row .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#service .row .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+#service .row .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+#service .row .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+#service .row .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+}
+
+#service .row .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+/*
+
+#index .jumbotron{
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+*/
+
+/*forum*/
+
+#forumMainMenu ul{
+    padding: 0;
+    margin-top: 10px;
+}
+
+#forumMainMenu ul li{
+    border-bottom: 1px solid black;
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+#forumMainMenu ul li a:hover{
+    text-decoration: underline;
+}
+
+#forumMainMenu ul li:nth-last-child(1){
+    border-bottom: 0px;
+}
+
+#forumMainMenu a{
+    text-decoration: none;
+}
+
+.forumCat{
+    margin: 15px 0px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.forumCat:hover{
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.forumCatHeader{
+    background-color: tomato;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.forumCatList{
+    padding: 10px 10px;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+.forumCatListLast{
+    padding: 10px 5px;
+    border-bottom: 0px;
+}
+
+#forumJumbotron{
+    height: 20vh;
+}
+
+/*services*/
+
+#servicesJumbotron{
+    height: 25vh;
+}
+
+.servicesCat{
+    height: 30vh;
+    margin-top: 5vh;
+}
+
