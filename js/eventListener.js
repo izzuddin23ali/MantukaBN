@@ -36,7 +36,7 @@ window.onscroll = function() {indexNavScrollFunction()};
 
 function indexNavScrollFunction(){
     if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
-        indexNav.style.background = "#3772FF";
+        indexNav.style.background = "#363538";
     }
     else{
         indexNav.style.background = "none";

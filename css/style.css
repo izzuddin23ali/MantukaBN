@@ -3,6 +3,7 @@ body {
   padding: 0;
   background-color: #333;
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*
@@ -56,6 +57,11 @@ a {
 }
 
 /*index*/
+#index .jumbotron {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
 #indexMain {
   background-image: url("/assets/index/hero monochrome blue 2.jpg");
   background-size: cover;
@@ -67,16 +73,16 @@ a {
   color: white;
 }
 
-#indexHeader {
+#index .hero {
   background-color: rgba(0, 0, 0, 0.35);
   padding: 5%;
 }
 
-#indexHeader h1 {
+#index .hero h1 {
   font-size: 5rem;
 }
 
-#indexHeader p {
+#index .hero p {
   font-size: 1.3rem;
 }
 
@@ -105,11 +111,7 @@ a {
   height: auto;
 }
 
-#index {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-}
-
+/*forum in index*/
 #indexForum ul {
   padding: 0;
 }
@@ -118,29 +120,36 @@ a {
   list-style: none;
   border-bottom: 1px solid black;
   padding: 10px 0;
+  color: #fff;
 }
 
 #indexForum ul li:nth-last-child(1) {
   border-bottom: 0px;
 }
 
+#indexForum {
+  background-image: url("/assets/index/meet monochrome orange.jpg");
+  background-size: cover;
+  color: #3772FF;
+}
+
 /*service in index*/
-#service {
+#indexService {
   height: 100vh;
   padding-top: 20vh;
 }
 
-#serviceJumbotron {
+#indexService {
   background-image: url("/assets/index/performance monochrome blue.jpg");
   background-size: cover;
 }
 
-#service h1,
-#service a {
+#indexService h1,
+#indexService a {
   color: #fff;
 }
 
-#service .row {
+#indexService .row {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -151,21 +160,21 @@ a {
           justify-content: space-between;
 }
 
-#service .row .card {
+#indexService .row .card {
   position: relative;
   cursor: pointer;
   border: 0px;
   background-color: inherit;
 }
 
-#service .row .card .face {
+#indexService .row .card .face {
   width: 300px;
   height: 200px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#service .row .card .face.face1 {
+#indexService .row .card .face.face1 {
   position: relative;
   background: #363538;
   display: -webkit-box;
@@ -182,28 +191,28 @@ a {
           transform: translateY(100px);
 }
 
-#service .row .card:hover .face.face1 {
+#indexService .row .card:hover .face.face1 {
   background: #3772FF;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-#service .row .face.face1 .content {
+#indexService .row .face.face1 .content {
   opacity: 0.2;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#service .row .card:hover .face.face1 .content {
+#indexService .row .card:hover .face.face1 .content {
   opacity: 1;
 }
 
-#service .row .card .face.face1 .content img {
+#indexService .row .card .face.face1 .content img {
   text-align: center;
   max-width: 100px;
 }
 
-#service .row .card .face.face1 .content h3 {
+#indexService .row .card .face.face1 .content h3 {
   margin: 10px 0 0;
   padding: 0;
   color: #fff;
@@ -211,7 +220,7 @@ a {
   font-size: 1.5em;
 }
 
-#service .row .card .face.face2 {
+#indexService .row .card .face.face2 {
   position: relative;
   background: #fff;
   display: -webkit-box;
@@ -232,18 +241,18 @@ a {
           transform: translateY(-100px);
 }
 
-#service .row .card:hover .face.face2 {
+#indexService .row .card:hover .face.face2 {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-#service .row .card .face.face2 .content p {
+#indexService .row .card .face.face2 .content p {
   margin: 0;
   padding: 0;
   color: #333;
 }
 
-#service .row .card .face.face2 .content a {
+#indexService .row .card .face.face2 .content a {
   margin: 15px 0 0;
   display: inline-block;
   text-decoration: none;
@@ -252,20 +261,11 @@ a {
   padding: 5px;
 }
 
-#service .row .card .face.face2 .content a:hover {
+#indexService .row .card .face.face2 .content a:hover {
   background: #333;
   color: #fff;
 }
 
-/*
-
-#index .jumbotron{
-    height: 100vh;
-    width: 100vw;
-    scroll-snap-align: start;
-}
-
-*/
 /*forum*/
 #forumMainMenu ul {
   padding: 0;
