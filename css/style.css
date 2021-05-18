@@ -56,16 +56,6 @@ a {
 }
 
 /*index*/
-/*
-
-#indexMain,
-#indexService,
-#indexForum,
-#indexAbout{
-    height: 100vh;
-}
-
-*/
 #indexMain {
   background-image: url("/assets/index/hero monochrome blue 2.jpg");
   background-size: cover;
@@ -120,21 +110,36 @@ a {
       scroll-snap-type: y mandatory;
 }
 
-#index ul {
+#indexForum ul {
   padding: 0;
 }
 
-#index ul li {
+#indexForum ul li {
   list-style: none;
   border-bottom: 1px solid black;
   padding: 10px 0;
 }
 
-#index ul li:nth-last-child(1) {
+#indexForum ul li:nth-last-child(1) {
   border-bottom: 0px;
 }
 
 /*service in index*/
+#service {
+  height: 100vh;
+  padding-top: 20vh;
+}
+
+#serviceJumbotron {
+  background-image: url("/assets/index/performance monochrome blue.jpg");
+  background-size: cover;
+}
+
+#service h1,
+#service a {
+  color: #fff;
+}
+
 #service .row {
   width: 100%;
   position: relative;
@@ -162,7 +167,7 @@ a {
 
 #service .row .card .face.face1 {
   position: relative;
-  background: #333;
+  background: #363538;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,8 +226,8 @@ a {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
 }

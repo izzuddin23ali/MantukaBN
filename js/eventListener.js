@@ -27,3 +27,18 @@ function topFunction(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+//index nav
+
+let indexNav = document.getElementById("indexNav");
+
+window.onscroll = function() {indexNavScrollFunction()};
+
+function indexNavScrollFunction(){
+    if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+        indexNav.style.background = "#3772FF";
+    }
+    else{
+        indexNav.style.background = "none";
+    }
+}
