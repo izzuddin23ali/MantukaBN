@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #333;
+  color: #fff;
 }
 
 /*
@@ -15,7 +17,7 @@ body {
 }
 
 a {
-  color: black;
+  color: #333;
 }
 
 .navbar-brand {
@@ -48,6 +50,11 @@ a {
           box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
+.nav-link,
+.navbar-brand {
+  color: #fff;
+}
+
 /*index*/
 /*
 
@@ -60,7 +67,7 @@ a {
 
 */
 #indexMain {
-  background-image: url("/assets/index/hero monochrome blue.jpg");
+  background-image: url("/assets/index/hero monochrome blue 2.jpg");
   background-size: cover;
   height: 100vh;
   color: white;
@@ -70,7 +77,19 @@ a {
   color: white;
 }
 
-#indexService,
+#indexHeader {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 5%;
+}
+
+#indexHeader h1 {
+  font-size: 5rem;
+}
+
+#indexHeader p {
+  font-size: 1.3rem;
+}
+
 #indexAbout {
   background-color: beige;
 }
@@ -79,7 +98,7 @@ a {
   margin: 10px 10px;
   padding: 15px;
   border-radius: 10px;
-  background-color: white;
+  background-color: #333;
 }
 
 #indexForum .boxShadow {
@@ -115,7 +134,7 @@ a {
   border-bottom: 0px;
 }
 
-/*service*/
+/*service in index*/
 #service .row {
   width: 100%;
   position: relative;
@@ -130,6 +149,8 @@ a {
 #service .row .card {
   position: relative;
   cursor: pointer;
+  border: 0px;
+  background-color: inherit;
 }
 
 #service .row .card .face {
@@ -157,7 +178,7 @@ a {
 }
 
 #service .row .card:hover .face.face1 {
-  background: #ff0057;
+  background: #3772FF;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -214,6 +235,7 @@ a {
 #service .row .card .face.face2 .content p {
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 #service .row .card .face.face2 .content a {
@@ -263,6 +285,7 @@ a {
 
 #forumMainMenu a {
   text-decoration: none;
+  color: #EBF5Df;
 }
 
 .forumCat {
@@ -279,7 +302,7 @@ a {
 }
 
 .forumCatHeader {
-  background-color: tomato;
+  background-color: #FE9000;
   padding: 5px;
   border-radius: 10px;
   border: 1px solid black;

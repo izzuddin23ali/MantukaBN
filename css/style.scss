@@ -1,6 +1,20 @@
+$black : #333;
+$offwhite: #EBF5Df;
+$orange: #FE9000;
+$royalBlue: #0A81D1;
+$white: #fff;
+
+$offblack: #363538;
+$grey: #8D8C8A;
+$offgrey: #F6F6F6;
+$blue: #3772FF;
+$yellowOrange: #FFA630;
+
 body{
     margin: 0;
     padding: 0;
+    background-color: #333;
+    color: $white;
 }
 
 /*
@@ -16,7 +30,7 @@ body{
 }
 
 a{
-    color: black;
+    color: $black;
 }
 
 .navbar-brand{
@@ -47,6 +61,11 @@ a{
     box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
+.nav-link,
+.navbar-brand{
+    color: $white;
+}
+
 /*index*/
 
 /*
@@ -61,7 +80,7 @@ a{
 */
 
 #indexMain{
-    background-image: url("/assets/index/hero monochrome blue.jpg");
+    background-image: url("/assets/index/hero monochrome blue 2.jpg");
     background-size: cover;
     height: 100vh;
     color: white;
@@ -71,8 +90,19 @@ a{
     color: white;
 }
 
+#indexHeader{
+    background-color: rgba(0,0,0,0.35);
+    padding: 5%;
+}
 
-#indexService,
+#indexHeader h1{
+    font-size: 5rem;
+}
+
+#indexHeader p{
+    font-size: 1.3rem;
+}
+
 #indexAbout{
     background-color: beige;
 }
@@ -81,7 +111,7 @@ a{
     margin: 10px 10px;
     padding: 15px;
     border-radius: 10px;
-    background-color: white;
+    background-color: $black;
 }
 
 #indexForum .boxShadow{
@@ -116,7 +146,7 @@ a{
     border-bottom: 0px;
 }
 
-/*service*/
+/*service in index*/
 
 #service .row{
     width: 100%;
@@ -128,6 +158,7 @@ a{
 #service .row .card{
     position: relative;
     cursor: pointer;
+    border: 0px;background-color: inherit;
 }
 
 #service .row .card .face{
@@ -147,7 +178,7 @@ a{
 }
 
 #service .row .card:hover .face.face1{
-    background: #ff0057;
+    background: $blue;
     transform: translateY(0);
 }
 
@@ -192,6 +223,7 @@ a{
 #service .row .card .face.face2 .content p{
     margin: 0;
     padding: 0;
+    color: $black;
 }
 
 #service .row .card .face.face2 .content a{
@@ -243,6 +275,7 @@ a{
 
 #forumMainMenu a{
     text-decoration: none;
+    color: $offwhite;
 }
 
 .forumCat{
@@ -257,7 +290,7 @@ a{
 }
 
 .forumCatHeader{
-    background-color: tomato;
+    background-color: $orange;
     padding: 5px;
     border-radius: 10px;
     border: 1px solid black;
