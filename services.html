@@ -21,97 +21,93 @@
 
 <body>
 
-    <div class="jumbotron" id="servicesJumbotron">
+    <nav class="navbar navbar-expand-lg px-5">
 
-        <div class="container">
+        <a class="navbar-brand">CarBN</a>
 
-            <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-control="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <a class="navbar-brand">CarBN</a>
+        <div class="collapse navbar-collapse ml-auto justify-content-end" id="navbarSupportContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forum.html">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-control="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <form class="form-inline">
+                <input class="for-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
 
-                <div class="collapse navbar-collapse ml-auto justify-content-end" id="navbarSupportContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="forum.html">Forum</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                    </ul>
+        </div>
 
-                    <form class="form-inline">
-                        <input class="for-control" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+    </nav>
+
+    <div class="jumbotron d-flex align-items-center" id="servicesJumbotron">
+
+        <div class="container-fluid">            
+
+            <div class="row">
+
+                <div class="col-lg-10 m-auto">
+
+                    <h1>Services</h1>
+
+                    <h5>lorem ipsum</h5>
 
                 </div>
 
-            </nav>
-
-            <div class="row">
-
-                <h1>Services</h1>
-    
-            </div>
-    
-            <div class="row">
-    
-                <h5>lorem ipsum</h5>
-    
             </div>
 
         </div>
 
     </div>
 
-    <div class="container">
+    <div class="container-fluid py-4">
 
         <div class="row d-flex justify-content-around">
 
-            <div class="col-lg-5 servicesCat border">
+            <div class="col-lg-4 servicesCat border clickable" id="performanceCard">
 
-                <h2>Performance</h2>
+                <h2 class="backedHeader">Performance</h2>
 
             </div>
 
-            <div class="col-lg-5 servicesCat border">
+            <div class="col-lg-4 servicesCat border clickable" id="fitmentCard">
 
-                <h2>Suspension</h2>
+                <h2 class="backedHeader">Fitment</h2>
                 
             </div>
 
         </div>
 
-        <div class="row">
+        <div class="row d-flex justify-content-around">
 
-            <div class="col-lg-6 servicesCat border">
+            <div class="col-lg-4 servicesCat border clickable" id="paintCard">
 
-                <h2>Paint Management</h2>
+                <h2 class="backedHeader">Paint Management</h2>
 
             </div>
 
-            <div class="col-lg-6 servicesCat border">
+            <div class="col-lg-4 servicesCat border clickable" id="designCard">
 
-                <h2>Bodykit</h2>
+                <h2 class="backedHeader">Bodykit</h2>
 
             </div>
 
         </div>
 
-    </div>
-
-    <div class="text-center p-3">
-        Deisigned by Nazgul @ 2021
     </div>
 
 </body>

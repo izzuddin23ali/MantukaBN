@@ -18,14 +18,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*
-
-.jumbotron{
-    background-color: lightblue;
-}
-
-*/
-
 .clickable{
     cursor: pointer;
 }
@@ -35,7 +27,7 @@ a{
 }
 
 .navbar-brand{
-    cursor: none; /*change this*/
+    cursor: pointer; 
 }
 
 #backToTop{
@@ -67,6 +59,27 @@ a{
     color: $white;
 }
 
+.loader{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    background-color: $white;
+    z-index: 99;
+    text-align: center;
+}
+
+.loaderImage{
+    position: absolute;
+}
+
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
 /*index*/
 
 #index .jumbotron{
@@ -75,7 +88,7 @@ a{
 }
 
 #indexMain{
-    background-image: url("/assets/index/hero monochrome blue 2.jpg");
+    background-image: url("/assets/index/hero\ monochrome\ orange.jpg");
     background-size: cover;
     height: 100vh;
     color: white;
@@ -96,10 +109,6 @@ a{
 
 #index .hero p{
     font-size: 1.3rem;
-}
-
-#indexAbout{
-    background-color: beige;
 }
 
 #index .boxShadow{
@@ -129,6 +138,11 @@ a{
     padding: 0;
 }
 
+#indexForum h2,
+#indexForum ul li{
+    color: $white;
+}
+
 #indexForum ul li{
     list-style: none;
     border-bottom: 1px solid black;
@@ -143,14 +157,26 @@ a{
 #indexForum{
     background-image: url("/assets/index/meet\ monochrome\ orange.jpg");
     background-size: cover;
-    color: $blue;
+    color: $black;
+}
+
+#indexForumContainer{
+    background-color: rgba($white, 0.8);
+    border: 1px solid $blue;
+    padding: 25px;
 }
 
 /*service in index*/
 
+#indexServiceContainer{
+    background-color: rgba($black, 0.8);
+    border: 1px solid $white;
+    height: 50%;
+    padding: 20px 0;
+}
+
 #indexService{
     height: 100vh;
-    padding-top: 20vh;
 }
 
 #indexService{
@@ -256,7 +282,28 @@ a{
     color: #fff;
 }
 
-/*forum*/
+#indexAbout{
+    background-color: $royalBlue;
+}
+
+#indexAbout1,
+#indexAbout2,
+#indexAbout3{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 1.1em;
+}
+
+/*
+
+#indexAbout2{
+    background-image: url("/assets/index/solution.jpg");
+    background-size: cover;
+}
+
+*/
+
+/*forum.html*/
 
 #forumMainMenu ul{
     padding: 0;
@@ -321,10 +368,40 @@ a{
 
 #servicesJumbotron{
     height: 25vh;
+    background-color: $yellowOrange;
 }
 
 .servicesCat{
     height: 30vh;
-    margin-top: 5vh;
+    color: $blue;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+#performanceCard{
+    background-image: url("/assets/service/performance.jpg");
+    background-size: cover;
+    background-position: 50% 51%;
+}
+
+#fitmentCard{
+    background-image: url("/assets/service/fitment.jpg");
+    background-size: cover;
+    background-position: 50% 90%;
+}
+
+#paintCard{
+    background-image: url("/assets/service/paint.jpg");
+    background-size: cover;
+    background-position: 50% 80%;
+}
+
+#designCard{
+    background-image: url("/assets/service/design.jpg");
+    background-size: cover;
+    background-position: 50% 46%;
+}
+
+.backedHeader{
+    background-color: rgba($grey, 0.5);
+}
