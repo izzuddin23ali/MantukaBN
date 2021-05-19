@@ -6,6 +6,10 @@ body {
   background-color: #333;
 }
 
+.fixed-top {
+  z-index: 50;
+}
+
 .clickable {
   cursor: pointer;
 }
@@ -53,7 +57,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #3772FF;
+  background-color: #3c53b4;
   z-index: 99;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
