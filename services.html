@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a438f2b6d9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/card.css">
 
 </head>
 
@@ -74,17 +75,17 @@
 
     </div>
 
-    <div class="container-fluid py-4">
+    <div class="container-fluid py-4 hidden">
 
         <div class="row d-flex justify-content-around">
 
-            <div class="col-lg-4 servicesCat border clickable" id="performanceCard">
+            <div class="col-lg-4 servicesCat border clickable" id="performanceCard" onclick="location.href='performanceIndex.html';">
 
                 <h2 class="backedHeader">Performance</h2>
 
             </div>
 
-            <div class="col-lg-4 servicesCat border clickable" id="fitmentCard">
+            <div class="col-lg-4 servicesCat border clickable" id="fitmentCard" onclick="location.href='fitmentIndex.html';">
 
                 <h2 class="backedHeader">Fitment</h2>
                 
@@ -94,13 +95,13 @@
 
         <div class="row d-flex justify-content-around">
 
-            <div class="col-lg-4 servicesCat border clickable" id="paintCard">
+            <div class="col-lg-4 servicesCat border clickable" id="paintCard" onclick="location.href='paintIndex.html';">
 
                 <h2 class="backedHeader">Paint Management</h2>
 
             </div>
 
-            <div class="col-lg-4 servicesCat border clickable" id="designCard">
+            <div class="col-lg-4 servicesCat border clickable" id="designCard" onclick="location.href='designIndex.html';">
 
                 <h2 class="backedHeader">Bodykit</h2>
 
@@ -110,6 +111,59 @@
 
     </div>
 
+    <main class="container">
+    
+        <article class="postcard blue">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="/assets/service/performanceL.jpg" alt="Image Title"/>
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title blue"><a href="#">Performance</a></h1>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+            </div>
+        </article>
+
+        <article class="postcard red">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="/assets/service/fitment.jpg" alt="Image Title" />	
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title red"><a href="#">Fitment</a></h1>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+            </div>
+        </article>
+
+        <article class="postcard green">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="/assets/service/paint.jpg" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title green"><a href="#">Paint Management</a></h1>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+            </div>
+        </article>
+
+        <article class="postcard yellow">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="/assets/service/designL.jpg" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title yellow"><a href="#">Design</a></h1>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+            </div>
+        </article>
+    </main>
+
+    <div class="loader">
+        <img src="assets/loadingC.gif">
+    </div>
+
 </body>
+
+<script src="js/eventListener.js"></script>
 
 </html>

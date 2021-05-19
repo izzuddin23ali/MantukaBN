@@ -13,21 +13,17 @@ $yellowOrange: #FFA630;
 body{
     margin: 0;
     padding: 0;
-    background-color: #333;
     color: $white;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: $black;
 }
 
 .clickable{
     cursor: pointer;
 }
 
-a{
-    color: $black;
-}
-
 .navbar-brand{
-    cursor: pointer; 
+    cursor: default; 
 }
 
 #backToTop{
@@ -65,19 +61,32 @@ a{
     top: 0;
     left: 0;
     position: fixed;
-    display: block;
-    background-color: $white;
+    display: flex;
+    background-color: $blue;
     z-index: 99;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.loaderImage{
-    position: absolute;
+.loader img{
+    width: 200px;
 }
 
 .hidden{
     display: none;
     visibility: hidden;
+}
+
+.loader.hidden{
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 /*index*/
@@ -283,7 +292,7 @@ a{
 }
 
 #indexAbout{
-    background-color: $royalBlue;
+    
 }
 
 #indexAbout1,
@@ -302,6 +311,11 @@ a{
 }
 
 */
+
+.section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
 
 /*forum.html*/
 
@@ -367,7 +381,7 @@ a{
 /*services*/
 
 #servicesJumbotron{
-    height: 25vh;
+    height: 20vh;
     background-color: $yellowOrange;
 }
 

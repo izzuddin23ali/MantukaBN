@@ -1,21 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #333;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
 }
 
 .clickable {
   cursor: pointer;
 }
 
-a {
-  color: #333;
-}
-
 .navbar-brand {
-  cursor: pointer;
+  cursor: default;
 }
 
 #backToTop {
@@ -54,19 +50,47 @@ a {
   top: 0;
   left: 0;
   position: fixed;
-  display: block;
-  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3772FF;
   z-index: 99;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.loaderImage {
-  position: absolute;
+.loader img {
+  width: 200px;
 }
 
 .hidden {
   display: none;
   visibility: hidden;
+}
+
+.loader.hidden {
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /*index*/
@@ -292,10 +316,6 @@ a {
   color: #fff;
 }
 
-#indexAbout {
-  background-color: #0A81D1;
-}
-
 #indexAbout1,
 #indexAbout2,
 #indexAbout3 {
@@ -312,6 +332,11 @@ a {
 }
 
 */
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
 /*forum.html*/
 #forumMainMenu ul {
   padding: 0;
@@ -376,7 +401,7 @@ a {
 
 /*services*/
 #servicesJumbotron {
-  height: 25vh;
+  height: 20vh;
   background-color: #FFA630;
 }
 
