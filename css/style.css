@@ -34,7 +34,7 @@ body {
   font-size: 18px;
 }
 
-#ToTop:hover {
+#backToTop:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -100,7 +100,7 @@ body {
 /*index*/
 #index .jumbotron {
   height: 100vh;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 #indexMain {
@@ -115,7 +115,7 @@ body {
 }
 
 #index .hero {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 5%;
 }
 
@@ -182,17 +182,6 @@ body {
 }
 
 /*service in index*/
-#indexServiceContainer {
-  background-color: rgba(51, 51, 51, 0.8);
-  border: 1px solid #fff;
-  height: 50%;
-  padding: 20px 0;
-}
-
-#indexService {
-  height: 100vh;
-}
-
 #indexService {
   background-image: url("/assets/index/performance monochrome blue.jpg");
   background-size: cover;
@@ -405,8 +394,10 @@ body {
 
 /*services*/
 #servicesJumbotron {
-  height: 20vh;
-  background-color: #FFA630;
+  height: 25vh;
+  background-image: url("/assets/service/jumbo monochrome orange.jpg");
+  background-position: 50% 50%;
+  color: #fff;
 }
 
 .servicesCat {
