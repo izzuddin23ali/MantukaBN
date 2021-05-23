@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 body {
   margin: 0;
   padding: 0;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #333;
+  font-family: "Baloo 2", cursive;
+  font-weight: initial;
+  text-rendering: optimizeLegibility;
 }
 
 .fixed-top {
@@ -97,10 +101,17 @@ body {
   }
 }
 
+.divider {
+  min-height: 10vh;
+  width: 100%;
+  background-color: #363538;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
 /*index*/
 #index .jumbotron {
-  height: 100vh;
-  scroll-snap-align: center;
+  min-height: 75vh;
 }
 
 #indexMain {
@@ -185,11 +196,6 @@ body {
 #indexService {
   background-image: url("/assets/index/performance monochrome blue.jpg");
   background-size: cover;
-}
-
-#indexService h1,
-#indexService a {
-  color: #fff;
 }
 
 #indexService .row {
@@ -309,12 +315,43 @@ body {
   color: #fff;
 }
 
+#indexAbout {
+  background-image: url("");
+}
+
 #indexAbout1,
 #indexAbout2,
 #indexAbout3 {
+  min-height: 60vh;
+  text-rendering: optimizeLegibility;
+}
+
+#indexAbout1 div,
+#indexAbout2 div,
+#indexAbout3 div {
+  background-color: rgba(54, 53, 56, 0.8);
   padding-top: 50px;
   padding-bottom: 50px;
   font-size: 1.1em;
+  min-width: 80%;
+}
+
+#indexAbout1 {
+  background-image: url("/assets/index/problem.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#indexAbout2 {
+  background-image: url("/assets/index/solution.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#indexAbout3 {
+  background-image: url("/assets/index/future.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /*
@@ -433,5 +470,49 @@ body {
 
 .backedHeader {
   background-color: rgba(141, 140, 138, 0.5);
+}
+
+/*design tab service*/
+#serviceIndex .jumbotron {
+  background-image: url("/assets/serviceDesign/design jumbo.jpg");
+  background-size: cover;
+  height: 20vh;
+  color: #FE9000;
+}
+
+#serviceIndex .jumbotron h1 {
+  font-size: 7.5em;
+}
+
+#serviceIndex #brands {
+  background-color: rgba(254, 144, 0, 0.75);
+}
+
+.brand {
+  cursor: pointer;
+}
+
+.brand img {
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.brand:hover {
+  background-color: #FE9000;
+}
+
+.regionLabel {
+  background-color: rgba(254, 144, 0, 0.9);
+  color: #333;
+  text-align: start;
+}
+
+#sortRow {
+  background-color: #333;
 }
 /*# sourceMappingURL=style.css.map */

@@ -50,3 +50,21 @@ let loader = document.querySelector(".loader");
 window.addEventListener("load", function(){
     loader.classList.add("hidden");
 })
+
+//design sorter
+
+var brandSort = document.getElementById("sort");
+
+let sortAlphabetically = document.getElementById("sortedAlphabetically");
+let sortedByRegion = document.getElementById("sortedByRegion");
+
+brandSort.addEventListener("change", function(){
+    if(this.value === "alphabetical"){
+        sortAlphabetically.classList.remove("hidden");
+        sortedByRegion.classList.add("hidden");
+    }
+    else if(this.value === "region"){
+        sortAlphabetically.classList.add("hidden");
+        sortedByRegion.classList.remove("hidden");
+    }
+})
