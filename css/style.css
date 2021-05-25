@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 body {
   margin: 0;
   padding: 0;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
   background-color: #333;
   font-family: "Baloo 2", cursive;
   font-weight: initial;
   text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .fixed-top {
@@ -514,5 +518,24 @@ body {
 
 #sortRow {
   background-color: #333;
+}
+
+/*paint tab service*/
+#paintIndex .jumbotron {
+  height: 10vh;
+  background-color: #FFA630;
+  color: #3772FF;
+  background-position: 50% 50%;
+}
+
+#paintIndex .tab {
+  border: 1px solid #FE9000;
+  background-color: #FFA630;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=style.css.map */

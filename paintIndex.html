@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Paint Management</title>
+
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a438f2b6d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+
+<style>
+
+#map { position: absolute; width: 100%; height: 70vh; bottom: 0; right: 0;}
+
+.marker {
+  background-image: url('/assets/mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+  color: black;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mapboxg1-popup-content a{
+    border: 0px;
+}
+
+</style>
+
+</head>
+
+<body id="paintIndex">
+
+    <nav class="navbar navbar-expand-lg px-5">
+
+        <a class="navbar-brand" href="index.html">CarBN</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-control="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ml-auto justify-content-end" id="navbarSupportContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forum.html">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+
+            <form class="form-inline">
+                <input class="for-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+        </div>
+
+    </nav>
+
+    <div class="jumbotron d-flex align-items-center">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+
+                    <h1>Design</h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row my-2 text-center">
+
+            <div class="col-lg-12">
+
+                <h3>Filter</h3>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-around">
+
+            <div class="col-lg-2 tab">
+
+                <p>Detailer</p>
+
+            </div>
+
+            <div class="col-lg-2 tab">
+
+                <p>Paint</p>
+
+            </div>
+
+            <div class="col-lg-2 tab">
+
+                <p>Paint Correction</p>
+
+            </div>
+
+            <div class="col-lg-2 tab">
+
+                <p>Coating Protection</p>
+
+            </div>
+
+            <div class="col-lg-2 tab">
+
+                <p>DIY Paint Management</p>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-end">
+
+            <div class="col-lg-2 text-end">
+
+                <p>clear filter</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-lg-12 text-center align-items-center justify-content-center border" id="map"></div>
+
+        </div>
+
+    </div>
+
+    <div class="loader">
+        <img src="assets/loadingCST.gif">
+    </div>
+
+</body>
+
+<script src="/js/map.js"></script>
+
+<script src="js/eventListener.js"></script>
+
+</html>
