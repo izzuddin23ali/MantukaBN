@@ -16,16 +16,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a438f2b6d9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/card.css">
+
 
     <style>
 
-        html{
+        html, body{
             scroll-snap-type: y proximity;
             scroll-behavior: smooth;
-        }
-
-        html{
-            scroll-snap-type: y mandatory;
         }
 
     </style>
@@ -40,7 +38,7 @@
 
         <nav class="navbar navbar-expand-lg">
 
-            <a class="navbar-brand">CarBN</a>
+            <a class="navbar-brand" href="index.html">CarBN</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-control="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -106,6 +104,8 @@
     </div>
 
     <!--service-->
+
+    <!--
 
     <div class="jumbotron text-center d-flex align-items-center" id="indexService">
 
@@ -249,6 +249,59 @@
 
     </div>
 
+-->
+
+    <div class="jumbotron d-flex align-items-center" id="indexService">
+
+        <main class="container">
+        
+            <article class="postcard blue">
+                <a class="postcard__img_link" href="performanceIndex.html">
+                    <img class="postcard__img" src="/assets/service/performanceL.jpg" alt="Image Title"/>
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title blue"><a href="#">Performance</a></h1>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                </div>
+            </article>
+
+            <article class="postcard red">
+                <a class="postcard__img_link" href="fitmentIndex.html">
+                    <img class="postcard__img" src="/assets/service/fitment.jpg" alt="Image Title" />	
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title red"><a href="#">Fitment</a></h1>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                </div>
+            </article>
+
+            <article class="postcard green">
+                <a class="postcard__img_link" href="paintIndex.html">
+                    <img class="postcard__img" src="/assets/service/paint.jpg" alt="Image Title" />
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title green"><a href="#">Paint Management</a></h1>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                </div>
+            </article>
+
+            <article class="postcard yellow">
+                <a class="postcard__img_link" href="designIndex.html">
+                    <img class="postcard__img" src="/assets/service/designL.jpg" alt="Image Title" />
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title yellow"><a href="designIndex.html">Design</a></h1>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                </div>
+            </article>
+        </main>
+
+    </div>
+
     <!--forum-->
 
     <div class="jumbotron text-center d-flex align-items-center" id="indexForum">
@@ -350,45 +403,59 @@
 
     <!--about-->
 
-    <div class="jumbotron text-center d-flex align-items-center" id="indexAbout">
+    <div class="jumbotron text-center d-flex align-items-center">
 
         <div class="container">
 
-            <div class="row d-flex justify-content-around text-center">
+            <div class="row d-flex text-center" id="indexAbout">
 
-                <div class="col-lg-3 boxShadow" id="indexAbout1">
+                <div class="col-lg-4 text-center d-flex align-items-center px-4" id="indexAbout1">
 
-                    <h5>ABOUT US</h5>
+                    <div class="border px-3">
 
-                    <h4>The Problem</h4>
+                        <h5>ABOUT US</h5>
 
-                    <hr>
+                        <h4>The Problem</h4>
 
-                    <p>The problem comes up when the developer wanted to start to get into the local car scene and not knowing where to start. The developer have scoured Facebook group pages looking for information and getting less than optimal information to buy bodykit for his own car.</p>
+                        <hr>
 
-                </div>
+                        <p>The problem comes up when the developer wanted to start to get into the local car scene and not knowing where to start. The developer have scoured Facebook group pages looking for information and getting less than optimal information to buy bodykit for his own car.</p>
 
-                <div class="col-lg-3 boxShadow" id="indexAbout2">
 
-                    <h5>ABOUT US</h5>
-
-                    <h4>The Solution</h4>
-
-                    <hr>
-
-                    <p>The developer wants to develop a website that will gather all the information that is needed to start getting into the local car scene and congregate all the local business that delves in the automotive industry i.e. aftermarket parts, paint management, bodykit order etc.</p>
+                    </div>
 
                 </div>
 
-                <div class="col-lg-3 boxShadow" id="indexAbout3">
+                <div class="col-lg-4 d-flex align-items-center px-4" id="indexAbout2">
 
-                    <h5>ABOUT US</h5>
+                    <div class="border px-3">
 
-                    <h4>The Future</h4>
+                        <h6>ABOUT US</h6>
 
-                    <hr>
+                        <h4>The Solution</h4>
+    
+                        <hr>
+    
+                        <p>The developer wants to develop a website that will gather all the information that is needed to start getting into the local car scene and congregate all the local business that delves in the automotive industry i.e. aftermarket parts, paint management, bodykit order etc.</p>
+    
 
-                    <p>Lorem ipsum</p>
+                    </div>
+                    
+                </div>
+
+                <div class="col-lg-4 d-flex align-items-center px-4" id="indexAbout3">
+
+                    <div class="border px-3">
+
+                        <h5>ABOUT US</h5>
+
+                        <h4>The Future</h4>
+    
+                        <hr>
+    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore</p>
+
+                    </div>
 
                 </div>
 
