@@ -28,4 +28,13 @@
 .mapboxg1-popup-content a {
   border: 0px;
 }
+
+.inactiveTab {
+  background: #fe9000;
+  background: linear-gradient(47deg, #fe9000 33%, #ffa630 33%);
+}
+
+.activeTab {
+  background-color: #FE9000;
+}
 /*# sourceMappingURL=map.css.map */

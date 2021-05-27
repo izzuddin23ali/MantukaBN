@@ -24,3 +24,12 @@
 .mapboxg1-popup-content a{
     border: 0px;
 }
+
+.inactiveTab{
+    background: rgb(254,144,0);
+    background: linear-gradient(47deg, rgba(254,144,0,1) 33%, rgba(255,166,48,1) 33%);
+}
+
+.activeTab{
+    background-color: #FE9000;
+}

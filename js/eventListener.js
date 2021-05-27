@@ -53,6 +53,8 @@ window.addEventListener("load", function(){
 
 //design sorter
 
+/*
+
 var brandSort = document.getElementById("sort");
 
 let sortAlphabetically = document.getElementById("sortedAlphabetically");
@@ -68,3 +70,5 @@ brandSort.addEventListener("change", function(){
         sortedByRegion.classList.remove("hidden");
     }
 })
+
+*/
