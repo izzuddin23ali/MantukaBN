@@ -462,7 +462,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #serviceIndex .jumbotron h1{
-    font-size: 7.5em;
+    font-size: 5.5em;
 }
 
 #serviceIndex #brands{
@@ -479,6 +479,10 @@ h1, h2, h3, h4, h5, h6{
     text-align: center;
     margin: auto;
     display: block;
+}
+
+.brand a{
+    color: white;
 }
 
 .brandImage img{
