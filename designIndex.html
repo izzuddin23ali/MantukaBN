@@ -21,7 +21,7 @@
 
 <body id="serviceIndex">
 
-    <nav class="navbar navbar-expand-lg px-5">
+    <nav class="navbar navbar-expand-lg px-5" id="indexNav">
 
         <a class="navbar-brand" href="index.html">CarBN</a>
 
@@ -72,19 +72,33 @@
 
     </div>
 
-    <div class="container" id="brands">
+    <div class="container my-2">
 
-        <div class="row justify-content-end py-3" id="sortRow">
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <h3>Local Reseller</h3>
+
+                <p>You can contact these reseller for all your bodykit, aero, design needs.</p>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-end">
 
             <div class="col-lg-4 text-end">
 
-                <p>sort:</p>
+                <select name="sort" id="sort" class="sort">
 
-                <select name="sortBrands" id="sort" class="sort">
+                    <option value="category">Sort by: All by Category</option>
 
-                <option value="alphabetical">Alphabetical (A-Z)</option>
+                    <option value="alphabetical">Sort by: All Alphabetical</option>
 
-                <option value="region">Region</option>
+                    <option value="bodykit">Filter by: Bodykit</option>
+
+                    <option value="light">Filter by: Lights</option>
 
                 </select>
 
@@ -92,540 +106,1232 @@
 
         </div>
 
-        <div class="row mb-2" id="sortedAlphabetically">
+    </div>
+
+    <!--filter all category-->
+
+    <div class="container" id="category">
+
+        <!--bodykit-->
+
+        <div class="row my-2">
 
             <div class="col-lg-12">
 
-                <div class="row justify-content-around text-center mb-5 mt-3">
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Audi.png">
-
-                        <p>audi</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/BMW.png">
-
-                        <p>BMW</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Chrysler.png">
-
-                        <p>Chrsyler</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Ford.png">
-
-                        <p>Ford</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Honda.png">
-
-                        <p>Honda</p>
-
-                    </div>
-
-                </div>
-
-                <div class="row justify-content-around text-center my-5">
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Hyundai.png">
-
-                        <p>Hyundai</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Jaguar.png">
-
-                        <p>Jaguar</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Jeep.png">
-
-                        <p>Jeep</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Kia.png">
-
-                        <p>Kia</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Lexus.png">
-
-                        <p>Lexus</p>
-
-                    </div>
-
-                </div>
-
-                <div class="row justify-content-around text-center my-5">
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Mazda.png">
-
-                        <p>Mazda</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Mercedes Benz.png">
-
-                        <p>Mercedes Benz</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Mini.png">
-
-                        <p>Mini</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Mitsubishi.png">
-
-                        <p>Mitsubishi</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Nissan.png">
-
-                        <p>Nissan</p>
-
-                    </div>
-
-                </div>
-
-                <div class="row justify-content-around text-center my-5">
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Perodua.png">
-
-                        <p>Perodua</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Peugeot.png">
-
-                        <p>Peugeot</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Porsche.png">
-
-                        <p>Porsche</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Proton.png">
-
-                        <p>Proton</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Subaru.png">
-
-                        <p>Subaru</p>
-
-                    </div>
-
-                </div>
-
-                <div class="row justify-content-around text-center mt-5 mb-3">
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Suzuki.png">
-
-                        <p>Suzuki</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Toyota.png">
-
-                        <p>Toyota</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Volkswagen.png">
-
-                        <p>Lexus</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Volvo.png">
-
-                        <p>Lexus</p>
-
-                    </div>
-
-                    <div class="col-lg-2"></div>
-
-                </div>
+                <h3>Bodykit</h3>
 
             </div>
 
         </div>
 
-        <div class="row hidden mb-2" id="sortedByRegion">
+        <!--first row-->
 
-            <div class="col-lg-12 text-center">
+        <div class="row justify-content-around mb-5 mt-3">
 
-                <!--region 1-->
+            <div class="col-lg-2 brand pt-3">
 
-                <div class="row">
+                <div class="row mb-3">
 
-                    <div class="col-lg-12 regionLabel">
+                    <div class="col-lg-10 m-auto brandImage">
 
-                        <h1 class="region">American</h1>
-
-                    </div>                                       
-
-                </div>
-
-                <div class="row justify-content-around my-3">
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Chevrolet.png">
-
-                        <p>Chevrolet</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Chrysler.png">
-
-                        <p>Chrysler</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Ford.png">
-
-                        <p>Ford</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Jeep.png">
-
-                        <p>Jeep</p>
-
-                    </div>
-
-                    <div class="col-lg-2"></div>
-
-                </div>
-
-                <!--region 2-->
-
-                <div class="row">
-
-                    <div class="col-lg-12 regionLabel">
-
-                        <h1 class="region">Eurocars</h1>
-
-                    </div>                                       
-
-                </div>
-
-                <div class="row justify-content-around mt-3 mb-5">
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Audi.png">
-
-                        <p>Audi</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/BMW.png">
-
-                        <p>BMW</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Jaguar.png">
-
-                        <p>Jaguar</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Mercedes Benz.png">
-
-                        <p>Mercedes Benz</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Mini.png">
-                        
-                        <p>Mini</p>
+                        <img src="assets/reseller/bajit.jpg">
 
                     </div>
 
                 </div>
 
-                <div class="row justify-content-around mt-5 mb-3">
+                <h6>BajitBn Accessories</h6>
 
-                    <div class="col-lg-2 brand">
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/Bajitbn.accessories/" target="_blank">@Bajitbn.accessories</a></p>
 
-                        <img src="assets/cars/Peugeot.png">
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/bajitbn.accessories/" target="_blank">bajitbn.accessories</a></p>
 
-                        <p>Peugeot</p>
+                <p><i class="fas fa-phone-square"></i>+673 8926548</p>
 
-                    </div>
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit</p>
 
-                    <div class="col-lg-2 brand">
+            </div>
 
-                        <img src="assets/cars/Porsche.png">
+            <div class="col-lg-2 brand pt-3">
 
-                        <p>Porsche</p>
+                <div class="row mb-3">
 
-                    </div>
+                    <div class="col-lg-10 m-auto brandImage">
 
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Volkswagen.png">
-
-                        <p>Volswagen</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Volvo.png">
-
-                        <p>Volvo</p>
-
-                    </div>
-
-                    <div class="col-lg-2"></div>
-
-                </div>
-
-                <!--region 3-->
-
-                <div class="row">
-
-                    <div class="col-lg-12 regionLabel">
-
-                        <h1 class="region">JDM</h1>
-
-                    </div>                                       
-
-                </div>
-
-                <div class="row justify-content-around mb-5 mt-3">
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Honda.png">
-
-                        <p>Honda</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Lexus.png">
-
-                        <p>Lexus</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Mazda.png">
-
-                        <p>Mazda</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Mitsubishi.png">
-
-                        <p>Mitsubishi</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Nissan.png">
-
-                        <p>Nissan</p>
+                        <img src="assets/reseller/bga.jpg">
 
                     </div>
 
                 </div>
+        
+                <h6>Bodykit Garage Autopart</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/Bodykit-Garage-Autopart-149701955734338/" target="_blank">Bodykit Garage Autopart</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="" target="_blank"></a></p>
+        
+                <p><i class="fas fa-phone-square">+673 8235315</i></p>
+        
+                <p class="meta"><i class="fas fa-info-circle">bodykit, carbon fibre, wheels</i></p>
+        
+            </div>
 
-                <div class="row justify-content-around mt-5 mb-3">
+            <div class="col-lg-2 brand pt-3">
 
-                    <div class="col-lg-2 brand">
+                <div class="row mb-3">
 
-                        <img src="assets/cars/Subaru.png">
+                    <div class="col-lg-10 m-auto brandImage">
 
-                        <p>Subaru</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Suzuki.png">
-
-                        <p>Suzuki</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Toyota.png">
-
-                        <p>Toyota</p>
+                        <img src="assets/reseller/bajit.jpg">
 
                     </div>
 
-                    <div class="col-lg-2"></div>
+                </div>
+        
+                <h6>cars_accessories_bn</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="" target="_blank"></a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/cars_accessories_bn/" target="_blank">cars_accessories_bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 7126066</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover, lights, steering, track, wheels</p>
+        
+            </div>
 
-                    <div class="col-lg-2"></div>
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/dyn.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Dyn's Property Autoparts</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/dynsproperty" target="_blank">Dyn's Property Autoparts</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/dyns_property_autoparts/" target="_blank">dyns_property_autoparts</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8614673</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/fs.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>FS Bodykit</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/FSBodyKit" target="_blank">FS Bodykit</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/fsbodykit.bn/" target="_blank">fsbodykit.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8697778</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover, wheels</p>
+        
+            </div>
+
+        </div>
+
+        <!--row 2-->
+
+        <div class="row justify-content-around mt-5 mb-3">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/iparts.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>IPARTS.BN</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/profile.php?id=100063639840151" target="_blank">Iparts.bn</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/iparts.bn/" target="_blank">iparts.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i></p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, carbon fibre, exhaust, lights</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/bajit.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Lee Autowerks</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/leeAutos" target="_blank">Lee Autowerks</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="" target="_blank"></a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8639366</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover general parts, wheels</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/mhbg.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>ManHussaini Bodykit Garage</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/Manhussainibodykit" target="_blank">ManHussaini Bodykit Garage</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/manhussaini_bodykit/" target="_blank">manhussaini_bodykit</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 7147812</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, turbo, lights, general interior</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/midday.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Midday Autoparts</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/MiddayAutopartsBN/" target="_blank">Midday Autoparts</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/middayautoparts/" target="_blank">middayautoparts</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8761605</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, lights</p>
+        
+            </div>
+
+            <div class="col-lg-2"></div>
+
+        </div>
+
+        <!--custom-->
+
+        <div class="row my-2">
+
+            <div class="col-lg-12">
+
+                <h3>Custom</h3>
+
+            </div>
+
+        </div>
+
+        <!--first row-->
+
+        <div class="row my-3 justify-content-around my-3">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/maq.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Maq Jack Lee</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/profile.php?id=100023288267143" target="_blank">Maq Jack Lee</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/maq_jacklee/" target="_blank">maq_jacklee</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8600588</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>custom made parts</p>
+        
+            </div>
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2"></div>
+
+        </div>
+
+        <!--lights-->
+
+        <div class="row my-2">
+
+            <div class="col-lg-12">
+
+                <h3>Lights</h3>
+
+            </div>
+
+        </div>
+
+        <div class="row my-3 justify-content-around my-3">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/acadz.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Acadz Garage</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/acadzgarage002" target="_blank">Acadz Garage</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/acadzgarage_bn/" target="_blank">acadzgarage_bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8910214</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>lights, stickers, universal car parts, wrap</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/acadz.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>dynamiclightsbn</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/dynamiclightsbn" target="_blank">dynamiclightsbn</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/dynamiclightsbn/" target="_blank">dynamiclightsbn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8835110</p>
+        
+                <p class="meta"><i class="fas fa-info-circle">lights</i></p>
+
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/fs.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>FS Bodykit</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/FSBodyKit" target="_blank">FS Bodykit</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/fsbodykit.bn/" target="_blank">fsbodykit.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8697778</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover, wheels</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/iparts.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>IPARTS.BN</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/profile.php?id=100063639840151" target="_blank">Iparts.bn</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/iparts.bn/" target="_blank">iparts.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i></p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, carbon fibre, exhaust, lights</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/midday.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Midday Autoparts</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/MiddayAutopartsBN/" target="_blank">Midday Autoparts</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/middayautoparts/" target="_blank">middayautoparts</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8761605</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, lights</p>
+        
+            </div>
+
+        </div>
+
+        <!--universal-->
+
+        <div class="row my-2">
+
+            <div class="col-lg-12">
+
+                <h3>Universal</h3>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-around my-3">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/acadz.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Acadz Garage</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/acadzgarage002" target="_blank">Acadz Garage</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/acadzgarage_bn/" target="_blank">acadzgarage_bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8910214</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>lights, stickers, universal car parts, wrap</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/ash.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>ASHS Garage</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/ASHS.Enterprise" target="_blank">ASHS Garage</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/ashs.garage/" target="_blank">ashs.garage</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8764279</p>
+        
+                <p class="meta"><i class="fas fa-info-circle">universal car parts</i></p>
+        
+            </div>
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2"></div>
+
+        </div>
+
+    </div>
+
+    <!--filter all alphabetical-->
+
+    <div class="container hidden" id="alphabetical">
+
+        <!--row 1-->
+
+        <div class="row justify-content-around mt-3 mb-5">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/acadz.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Acadz Garage</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/acadzgarage002" target="_blank">Acadz Garage</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/acadzgarage_bn/" target="_blank">acadzgarage_bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8910214</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>lights, stickers, universal car parts, wrap</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/ash.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>ASHS Garage</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/ASHS.Enterprise" target="_blank">ASHS Garage</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/ashs.garage/" target="_blank">ashs.garage</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8764279</p>
+        
+                <p class="meta"><i class="fas fa-info-circle">universal car parts</i></p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/bajit.jpg">
+
+                    </div>
 
                 </div>
 
-                <!--region 4-->
+                <h6>BajitBn Accessories</h6>
 
-                <div class="row">
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/Bajitbn.accessories/" target="_blank">@Bajitbn.accessories</a></p>
 
-                    <div class="col-lg-12 regionLabel">
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/bajitbn.accessories/" target="_blank">bajitbn.accessories</a></p>
 
-                        <h1 class="region">KDM</h1>
+                <p><i class="fas fa-phone-square"></i>+673 8926548</p>
 
-                    </div>                                       
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit</p>
 
-                </div>
+            </div>
 
-                <div class="row justify-content-around my-3">
+            <div class="col-lg-2 brand pt-3">
 
-                    <div class="col-lg-2 brand">
+                <div class="row mb-3">
 
-                        <img src="assets/cars/Hyundai.png">
+                    <div class="col-lg-10 m-auto brandImage">
 
-                        <p>Hyundai</p>
-
-                    </div>
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Kia.png">
-
-                        <p>Kia</p>
+                        <img src="assets/reseller/bga.jpg">
 
                     </div>
 
-                    <div class="col-lg-2"></div>
-
-                    <div class="col-lg-2"></div>
-
-                    <div class="col-lg-2"></div>
-
                 </div>
+        
+                <h6>Bodykit Garage Autopart</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/Bodykit-Garage-Autopart-149701955734338/" target="_blank">Bodykit Garage Autopart</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="" target="_blank"></a></p>
+        
+                <p><i class="fas fa-phone-square">+673 8235315</i></p>
+        
+                <p class="meta"><i class="fas fa-info-circle">bodykit, carbon fibre, wheels</i></p>
+        
+            </div>
 
-                <!--region 5-->
+            <div class="col-lg-2 brand pt-3">
 
-                <div class="row">
+                <div class="row mb-3">
 
-                    <div class="col-lg-12 regionLabel">
+                    <div class="col-lg-10 m-auto brandImage">
 
-                        <h1 class="region">Malaysian</h1>
-
-                    </div>                                       
-
-                </div>
-
-                <div class="row justify-content-around my-3">
-
-                    <div class="col-lg-2 brand">
-
-                        <img src="assets/cars/Perodua.png">
-
-                        <p>Perodua</p>
+                        <img src="assets/reseller/bajit.jpg">
 
                     </div>
 
-                    <div class="col-lg-2 brand">
+                </div>
+        
+                <h6>cars_accessories_bn</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="" target="_blank"></a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/cars_accessories_bn/" target="_blank">cars_accessories_bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 7126066</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover, lights, steering, track, wheels</p>
+        
+            </div>
 
-                        <img src="assets/cars/Proton.png">
+        </div>
 
-                        <p>Proton</p>
+        <!--row 2-->
+
+        <div class="row justify-content-around my-5">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/dyn.jpg">
 
                     </div>
 
-                    <div class="col-lg-2"></div>
+                </div>
+        
+                <h6>Dyn's Property Autoparts</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/dynsproperty" target="_blank">Dyn's Property Autoparts</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/dyns_property_autoparts/" target="_blank">dyns_property_autoparts</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8614673</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover</p>
+        
+            </div>
 
-                    <div class="col-lg-2"></div>
+            <div class="col-lg-2 brand pt-3">
 
-                    <div class="col-lg-2"></div>
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/acadz.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>dynamiclightsbn</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/dynamiclightsbn" target="_blank">dynamiclightsbn</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/dynamiclightsbn/" target="_blank">dynamiclightsbn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8835110</p>
+        
+                <p class="meta"><i class="fas fa-info-circle">lights</i></p>
+
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/fs.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>FS Bodykit</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/FSBodyKit" target="_blank">FS Bodykit</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/fsbodykit.bn/" target="_blank">fsbodykit.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8697778</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover, wheels</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/iparts.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>IPARTS.BN</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/profile.php?id=100063639840151" target="_blank">Iparts.bn</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/iparts.bn/" target="_blank">iparts.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i></p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, carbon fibre, exhaust, lights</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/bajit.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Lee Autowerks</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/leeAutos" target="_blank">Lee Autowerks</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="" target="_blank"></a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8639366</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover general parts, wheels</p>
+        
+            </div>
+
+        </div>
+
+        <!--row 3-->
+
+        <div class="row justify-content-around mt-5 mb-3">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/maq.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Maq Jack Lee</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/profile.php?id=100023288267143" target="_blank">Maq Jack Lee</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/maq_jacklee/" target="_blank">maq_jacklee</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8600588</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>custom made parts</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/mhbg.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>ManHussaini Bodykit Garage</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/Manhussainibodykit" target="_blank">ManHussaini Bodykit Garage</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/manhussaini_bodykit/" target="_blank">manhussaini_bodykit</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 7147812</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, turbo, lights, general interior</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/midday.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Midday Autoparts</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/MiddayAutopartsBN/" target="_blank">Midday Autoparts</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/middayautoparts/" target="_blank">middayautoparts</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8761605</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, lights</p>
+        
+            </div>
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2"></div>
+
+        </div>
+
+    </div>
+
+    <!--filter bodykit-->
+
+    <div class="container hidden" id="bodykit">
+
+        <div class="row my-2">
+
+            <div class="col-lg-12">
+
+                <h3>Bodykit</h3>
+
+            </div>
+
+        </div>
+
+        <!--first row-->
+
+        <div class="row justify-content-around mb-5 mt-3">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/bajit.jpg">
+
+                    </div>
 
                 </div>
 
+                <h6>BajitBn Accessories</h6>
+
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/Bajitbn.accessories/" target="_blank">@Bajitbn.accessories</a></p>
+
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/bajitbn.accessories/" target="_blank">bajitbn.accessories</a></p>
+
+                <p><i class="fas fa-phone-square"></i>+673 8926548</p>
+
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit</p>
+
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/bga.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Bodykit Garage Autopart</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/Bodykit-Garage-Autopart-149701955734338/" target="_blank">Bodykit Garage Autopart</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="" target="_blank"></a></p>
+        
+                <p><i class="fas fa-phone-square">+673 8235315</i></p>
+        
+                <p class="meta"><i class="fas fa-info-circle">bodykit, carbon fibre, wheels</i></p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/bajit.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>cars_accessories_bn</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="" target="_blank"></a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/cars_accessories_bn/" target="_blank">cars_accessories_bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 7126066</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover, lights, steering, track, wheels</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/dyn.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Dyn's Property Autoparts</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/dynsproperty" target="_blank">Dyn's Property Autoparts</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/dyns_property_autoparts/" target="_blank">dyns_property_autoparts</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8614673</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/fs.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>FS Bodykit</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/FSBodyKit" target="_blank">FS Bodykit</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/fsbodykit.bn/" target="_blank">fsbodykit.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8697778</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover, wheels</p>
+        
+            </div>
+
+        </div>
+
+        <!--row 2-->
+
+        <div class="row justify-content-around mt-5 mb-3">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/iparts.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>IPARTS.BN</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/profile.php?id=100063639840151" target="_blank">Iparts.bn</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/iparts.bn/" target="_blank">iparts.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i></p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, carbon fibre, exhaust, lights</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/bajit.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Lee Autowerks</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/leeAutos" target="_blank">Lee Autowerks</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="" target="_blank"></a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8639366</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover general parts, wheels</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/mhbg.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>ManHussaini Bodykit Garage</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/Manhussainibodykit" target="_blank">ManHussaini Bodykit Garage</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/manhussaini_bodykit/" target="_blank">manhussaini_bodykit</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 7147812</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, turbo, lights, general interior</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/midday.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Midday Autoparts</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/MiddayAutopartsBN/" target="_blank">Midday Autoparts</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/middayautoparts/" target="_blank">middayautoparts</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8761605</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, lights</p>
+        
+            </div>
+
+            <div class="col-lg-2"></div>
+
+        </div>
+
+    </div>
+
+    <!--filter light-->
+
+    <div class="container hidden" id="lights">
+
+        <div class="row my-2">
+
+            <div class="col-lg-12">
+
+                <h3>Lights</h3>
+
+            </div>
+
+        </div>
+
+        <div class="row my-3 justify-content-around">
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/acadz.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Acadz Garage</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/acadzgarage002" target="_blank">Acadz Garage</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/acadzgarage_bn/" target="_blank">acadzgarage_bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8910214</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>lights, stickers, universal car parts, wrap</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/acadz.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>dynamiclightsbn</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/dynamiclightsbn" target="_blank">dynamiclightsbn</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/dynamiclightsbn/" target="_blank">dynamiclightsbn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8835110</p>
+        
+                <p class="meta"><i class="fas fa-info-circle">lights</i></p>
+
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/fs.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>FS Bodykit</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/FSBodyKit" target="_blank">FS Bodykit</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/fsbodykit.bn/" target="_blank">fsbodykit.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8697778</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, coilover, wheels</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/iparts.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>IPARTS.BN</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/profile.php?id=100063639840151" target="_blank">Iparts.bn</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/iparts.bn/" target="_blank">iparts.bn</a></p>
+        
+                <p><i class="fas fa-phone-square"></i></p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, carbon fibre, exhaust, lights</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3">
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-10 m-auto brandImage">
+
+                        <img src="assets/reseller/midday.jpg">
+
+                    </div>
+
+                </div>
+        
+                <h6>Midday Autoparts</h6>
+        
+                <p><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/MiddayAutopartsBN/" target="_blank">Midday Autoparts</a></p>
+        
+                <p><i class="fab fa-instagram-square"></i><a href="https://www.instagram.com/middayautoparts/" target="_blank">middayautoparts</a></p>
+        
+                <p><i class="fas fa-phone-square"></i>+673 8761605</p>
+        
+                <p class="meta"><i class="fas fa-info-circle"></i>bodykit, lights</p>
+        
             </div>
 
         </div>
@@ -637,6 +1343,73 @@
     </div>
 
 </body>
+
+<!--
+
+    <div class="col-lg-2 brand pt-3">
+
+        <div class="row mb-3">
+
+            <div class="col-lg-10 m-auto brandImage">
+
+                <img src="assets/reseller/bajit.jpg">
+
+            </div>
+
+        </div>
+
+        <h6>BajitBn Accessories</h6>
+
+        <p><i class="fab fa-facebook-square"></i><a href="" target="_blank"></a></p>
+
+        <p><i class="fab fa-instagram-square"></i><a href="" target="_blank"></a></p>
+
+        <p><i class="fas fa-phone-square"></i>+673 8926548</p>
+
+        <p class="meta"><i class="fas fa-info-circle"></i></p>
+
+    </div>
+
+        -->
+
+        
+<script>
+
+    var sort = document.getElementById("sort");
+
+    let category = document.getElementById("category");
+    let alphabetical = document.getElementById("alphabetical");
+    let bodykit = document.getElementById("bodykit");
+    let lights = document.getElementById("lights");
+
+    sort.addEventListener("change", function(){
+        if(this.value === "category"){
+            category.classList.remove("hidden");
+            alphabetical.classList.add("hidden");
+            bodykit.classList.add("hidden");
+            lights.classList.add("hidden");
+        }
+        else if(this.value === "alphabetical"){
+            category.classList.add("hidden");
+            alphabetical.classList.remove("hidden");
+            bodykit.classList.add("hidden");
+            lights.classList.add("hidden");
+        }
+        else if(this.value === "bodykit"){
+            category.classList.add("hidden");
+            alphabetical.classList.add("hidden");
+            bodykit.classList.remove("hidden");
+            lights.classList.add("hidden");
+        }
+        else if(this.value === "light"){
+            category.classList.add("hidden");
+            alphabetical.classList.add("hidden");
+            bodykit.classList.add("hidden");
+            lights.classList.remove("hidden");
+        }
+    })
+
+</script>
 
 <script src="js/array.js"></script>
 
