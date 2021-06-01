@@ -12,6 +12,7 @@ let tabs = document.querySelectorAll(".tab");
 
 tabs.forEach(function(tab){
     tab.addEventListener("click", function(){
+        marker.remove();
         if(tab.classList.contains("activeTab")){
             tab.classList.remove("activeTab");
             console.log("click");
@@ -197,7 +198,7 @@ var detailerjson = {
             },
             properties: {
             title: "KM Car Detailing BN",
-            description: 'Detailer / Coater / Wrap',
+            description: 'Detailer / Coater',
             facebook: "https://www.facebook.com/kmcardetailingbn",
             instagram: "https://www.instagram.com/kmcardetailingbn/",
             number: "+673 8863636",
@@ -229,72 +230,6 @@ var detailerjson = {
             facebook: "https://www.facebook.com/OCDBNOFFICIAL/",
             instagram: "https://www.instagram.com/ocdbn/",
             number: "+673 7322112",
-            }
-        }
-    ]
-}
-
-var painterjson = {
-    type: "FeatureCollection",
-    features: [{
-        type: 'Feature',
-        geometry: {
-        type: 'Point',
-        coordinates: [114.4133805, 4.6500147]
-        },
-        properties: {
-        title: 'Carpro',
-        description: 'DIY/Detailer',
-        facebook: "https://www.facebook.com/carpro.brunei/",
-        instagram: "",
-        number: ""
-        }
-    }]
-}
-
-var wrapjson = {
-    type: "FeatureCollection",
-    features: [
-        {
-            type: 'Feature',
-            geometry: {
-            type: 'Point',
-            coordinates: [114.9514973, 4.9870613]
-            },
-            properties: {
-            title: "Acadz Garage",
-            description: 'Wrap',
-            facebook: "https://www.facebook.com/acadzgarage002",
-            instagram: "https://www.instagram.com/acadzgarage_bn/",
-            number: "+673 8910214",
-            }
-        },
-        {
-            type: 'Feature',
-            geometry: {
-            type: 'Point',
-            coordinates: [114.2159486, 4.5883066]
-            },
-            properties: {
-            title: "KM Car Detailing BN",
-            description: 'Detailer / Coater / Wrap',
-            facebook: "https://www.facebook.com/kmcardetailingbn",
-            instagram: "https://www.instagram.com/kmcardetailingbn/",
-            number: "+673 8863636",
-            }
-        },
-        {
-            type: 'Feature',
-            geometry: {
-            type: 'Point',
-            coordinates: [114.9439269, 4.9538238]
-            },
-            properties: {
-            title: "KM Car Detailing BN",
-            description: 'Detailer / Coater / Wrap',
-            facebook: "https://www.facebook.com/kmcardetailingbn",
-            instagram: "https://www.instagram.com/kmcardetailingbn/",
-            number: "+673 8863636",
             }
         }
     ]
@@ -540,207 +475,9 @@ new mapboxgl.Marker(el)
 .addTo(map);
 });
 */
-/*
+
 if(detailerToggle===true){
     detailerjson.features.forEach(function (marker) {
-        // create a HTML element for each feature
-        var el = document.createElement('div');
-        el.className = 'marker';
-         
-        // make a marker for each feature and add it to the map
-        new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // add popups
-            .setHTML(
-                '<h3>' +
-                marker.properties.title +
-                '</h3><p>' +
-                marker.properties.description +
-                '</p><a target="_blank" href="' +
-                marker.properties.facebook + 
-                '"><i class="fab fa-facebook-square"></i></a><a target="_blank" href="' +
-                marker.properties.instagram +
-                '"><i class="fab fa-instagram-square"></i></a>'
-            )
-            
-        )
-        .addTo(map);
-        });
-}
-
-if(paintToggle===true){
-    painterjson.features.forEach(function (marker) {
-        // create a HTML element for each feature
-        var el = document.createElement('div');
-        el.className = 'marker';
-         
-        // make a marker for each feature and add it to the map
-        new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // add popups
-            .setHTML(
-                '<h3>' +
-                marker.properties.title +
-                '</h3><p>' +
-                marker.properties.description +
-                '</p><a target="_blank" href="' +
-                marker.properties.facebook + 
-                '"><i class="fab fa-facebook-square"></i></a><a target="_blank" href="' +
-                marker.properties.instagram +
-                '"><i class="fab fa-instagram-square"></i></a>'
-            )
-            
-        )
-        .addTo(map);
-        });
-}
-
-if(wrapToggle===true){
-    wrapjson.features.forEach(function (marker) {
-        // create a HTML element for each feature
-        var el = document.createElement('div');
-        el.className = 'marker';
-         
-        // make a marker for each feature and add it to the map
-        new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // add popups
-            .setHTML(
-                '<h3>' +
-                marker.properties.title +
-                '</h3><p>' +
-                marker.properties.description +
-                '</p><a target="_blank" href="' +
-                marker.properties.facebook + 
-                '"><i class="fab fa-facebook-square"></i></a><a target="_blank" href="' +
-                marker.properties.instagram +
-                '"><i class="fab fa-instagram-square"></i></a>'
-            )
-            
-        )
-        .addTo(map);
-        });
-}
-
-if(coatToggle===true){
-    coaterjson.features.forEach(function (marker) {
-        // create a HTML element for each feature
-        var el = document.createElement('div');
-        el.className = 'marker';
-         
-        // make a marker for each feature and add it to the map
-        new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // add popups
-            .setHTML(
-                '<h3>' +
-                marker.properties.title +
-                '</h3><p>' +
-                marker.properties.description +
-                '</p><a target="_blank" href="' +
-                marker.properties.facebook + 
-                '"><i class="fab fa-facebook-square"></i></a><a target="_blank" href="' +
-                marker.properties.instagram +
-                '"><i class="fab fa-instagram-square"></i></a>'
-            )
-            
-        )
-        .addTo(map);
-        });
-}
-
-if(diyToggle===true){
-    diyjson.features.forEach(function (marker) {
-        // create a HTML element for each feature
-        var el = document.createElement('div');
-        el.className = 'marker';
-         
-        // make a marker for each feature and add it to the map
-        new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // add popups
-            .setHTML(
-                '<h3>' +
-                marker.properties.title +
-                '</h3><p>' +
-                marker.properties.description +
-                '</p><a target="_blank" href="' +
-                marker.properties.facebook + 
-                '"><i class="fab fa-facebook-square"></i></a><a target="_blank" href="' +
-                marker.properties.instagram +
-                '"><i class="fab fa-instagram-square"></i></a>'
-            )
-            
-        )
-        .addTo(map);
-        });
-}
-*/
-function checkMap(){
-    
-if(detailerToggle===true){
-    detailerjson.features.forEach(function (marker) {
-        // create a HTML element for each feature
-        var el = document.createElement('div');
-        el.className = 'marker';
-         
-        // make a marker for each feature and add it to the map
-        new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // add popups
-            .setHTML(
-                '<h3>' +
-                marker.properties.title +
-                '</h3><p>' +
-                marker.properties.description +
-                '</p><a target="_blank" href="' +
-                marker.properties.facebook + 
-                '"><i class="fab fa-facebook-square"></i></a><a target="_blank" href="' +
-                marker.properties.instagram +
-                '"><i class="fab fa-instagram-square"></i></a>'
-            )
-            
-        )
-        .addTo(map);
-        });
-}
-
-if(paintToggle===true){
-    painterjson.features.forEach(function (marker) {
-        // create a HTML element for each feature
-        var el = document.createElement('div');
-        el.className = 'marker';
-         
-        // make a marker for each feature and add it to the map
-        new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // add popups
-            .setHTML(
-                '<h3>' +
-                marker.properties.title +
-                '</h3><p>' +
-                marker.properties.description +
-                '</p><a target="_blank" href="' +
-                marker.properties.facebook + 
-                '"><i class="fab fa-facebook-square"></i></a><a target="_blank" href="' +
-                marker.properties.instagram +
-                '"><i class="fab fa-instagram-square"></i></a>'
-            )
-            
-        )
-        .addTo(map);
-        });
-}
-
-if(wrapToggle===true){
-    wrapjson.features.forEach(function (marker) {
         // create a HTML element for each feature
         var el = document.createElement('div');
         el.className = 'marker';
@@ -823,4 +560,19 @@ if(diyToggle===true){
         });
 }
 
-}
+var sort = document.getElementById("sort");
+
+var mapContainer = document.getElementById("mapContainer")
+
+    let list = document.getElementById("list");
+
+    sort.addEventListener("change", function(){
+        if(this.value === "list"){
+            list.classList.remove("hidden");
+            mapContainer.classList.add("hidden");
+        }
+        else if(this.value === "map"){
+            list.classList.add("hidden");
+            mapContainer.classList.remove("hidden");
+        }
+    })

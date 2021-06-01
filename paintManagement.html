@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Paint Management</title>
+
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a438f2b6d9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+
+<link rel="stylesheet" href="css/map.css">
+
+</head>
+
+<body id="paintIndex">
+
+    <nav class="navbar navbar-expand-lg px-5">
+
+        <a class="navbar-brand" href="index.html">CarBN</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-control="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ml-auto justify-content-end" id="navbarSupportContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forum.html">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+
+            <form class="form-inline">
+                <input class="for-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+        </div>
+
+    </nav>
+
+    <div class="jumbotron d-flex align-items-center">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+
+                    <h1>Paint Management</h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container my-2">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <h3>Local Professionals</h3>
+
+                <p>You can contact these paint management businesses, from professionals to mobile detailers, for anything to keep your automobiles' paint show room like condition.</p>
+
+                <p>You can choose to view through the detailers featured using the list view or map view to look at which detailers are near you or is conveniently located.</p>
+            
+            </div>
+
+        </div>
+
+        <div class="row justify-content-end">
+
+            <div class="col-lg-4 text-end">
+
+                <select name="sort" id="sort" class="sort">
+
+                    <option value="list">List view</option>
+
+                    <option value="map" selected="selected">Map view</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--list-->
+
+    <div class="container hidden" id="list">
+
+        <div class="row my-2">
+
+            <div class="col-lg-12">
+
+                <h3>Detailer</h3>
+
+            </div>
+
+        </div>
+
+        <!--first row-->
+
+        <div class="row justify-content-around mb-5 mt-3">
+
+            <div class="col-lg-2 brand pt-3 text-center">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/99detailing.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>99detailing.bn</h6>
+        
+                <p>
+        
+                <a href="https://www.facebook.com/99detailing-101708664807907" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+        
+                <a href="https://www.instagram.com/99detailing.bn/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+        
+                </p>
+        
+                <p><i class="fas fa-phone-square fa-lg"></i>    +673 7135260</p>
+                
+                <p class="meta"><i class="fas fa-info-circle"></i>  coater, detailer, diy</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3 text-center">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/alfazza.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Al-Fazza Car Wash</h6>
+        
+                <p>
+        
+                <a href="https://www.facebook.com/alfazza.ent" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+        
+                <a href="https://www.instagram.com/alfazza.carwash/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+        
+                </p>
+        
+                <p><i class="fas fa-phone-square fa-lg"></i>    +673 8785383</p>
+                
+                <p class="meta"><i class="fas fa-info-circle"></i>  detailer</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3 text-center">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/angelwax.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Angelwax Brunei</h6>
+        
+                <p>
+        
+                <a href="https://www.facebook.com/angelwax.brunei/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+        
+                <a href="https://www.instagram.com/angelwaxbrunei/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+        
+                </p>
+        
+                <p><i class="fas fa-phone-square fa-lg"></i>    +673 7379899</p>
+                
+                <p class="meta"><i class="fas fa-info-circle"></i>  detailer, diy</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3 text-center">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/autoartisan.png">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Auto Artisan</h6>
+        
+                <p>
+        
+                <a href="https://www.facebook.com/autoartisan.world" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+        
+                <a href="https://www.instagram.com/auto.artisan/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+        
+                </p>
+        
+                <p><i class="fas fa-phone-square fa-lg"></i>    +673 8258808</p>
+                
+                <p class="meta"><i class="fas fa-info-circle"></i>  coater, detailer</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3 text-center">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/autowerx.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Autowerx Detailer BN</h6>
+        
+                <p>
+        
+                <a href="https://www.instagram.com/autowerxdetailerbn/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+        
+                <a href="https://www.facebook.com/Autowerxdetailingbn/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+        
+                </p>
+        
+                <p><i class="fas fa-phone-square fa-lg"></i>    +673 7157414</p>
+                
+                <p class="meta"><i class="fas fa-info-circle"></i>  coater, detailer, diy, lights restoration</p>
+        
+            </div>
+
+        </div>
+
+        <!--second row-->
+
+        <div class="row justify-content-around my-5">
+
+            <div class="col-lg-2 brand pt-3 text-center">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/begawan.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Begawan Auto Detailing</h6>
+        
+                <p>
+        
+                <a href="https://www.instagram.com/begawan_autodetailing/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+        
+                <a href="https://www.facebook.com/protouch.autodetailer" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+        
+                </p>
+        
+                <p><i class="fas fa-phone-square fa-lg"></i>    +673 7157414</p>
+                
+                <p class="meta"><i class="fas fa-info-circle"></i>  coater, detailer, painter</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3 text-center">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/bruslick.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Bruslick</h6>
+        
+                <p>
+        
+                <a href="https://www.instagram.com/bruslick/?hl=en" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+        
+                <a href="https://www.facebook.com/BruSlickAutoDetailing/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+        
+                </p>
+        
+                <p><i class="fas fa-phone-square fa-lg"></i>    +673 8904905</p>
+                
+                <p class="meta"><i class="fas fa-info-circle"></i>  coater, detailer</p>
+        
+            </div>
+
+            <div class="col-lg-2 brand pt-3 text-center">
+
+                <div class="row mb-3">
+        
+                    <div class="col-lg-10 m-auto brandImage">
+        
+                        <img src="assets/reseller/carpro.jpg">
+        
+                    </div>
+        
+                </div>
+        
+                <h6>Carpro</h6>
+        
+                <p>
+        
+                <a href="https://www.instagram.com/carpro.brunei/?hl=en" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+        
+                <a href="https://www.facebook.com/carpro.brunei" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+        
+                </p>
+        
+                <p><i class="fas fa-phone-square fa-lg"></i>    +673 8209655</p>
+                
+                <p class="meta"><i class="fas fa-info-circle"></i>  detailer, diy</p>
+        
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--map-->
+
+    <div class="container-fluid" id="mapContainer">
+
+        <div class="row">
+
+            <div class="col-lg-12" id="map"></div>
+
+        </div>
+
+    </div>
+
+    <div class="loader">
+        <img src="assets/loadingCST.gif">
+    </div>
+
+</body>
+
+<script src="/js/map.js"></script>
+
+<script src="js/eventListener.js"></script>
+
+</html>

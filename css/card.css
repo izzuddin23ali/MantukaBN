@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+/*
+$main-yellow: #bdbb49 !default;
+$main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+
+$main-blue: #0076bd !default;
+$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+
+$card-blue: #3772FF !default;
+$card-blue-rgb-015: rgba(55, 114, 255, 0.1) !default;
+
+$card-orange: $FFA630 !default;
+$card-orange-rgb-015: rgba(255, 166, 48, 0.1) !default;
+*/
 /* This pen */
 body {
   font-family: "Baloo 2", cursive;
@@ -204,19 +217,19 @@ a, a:hover {
 }
 
 .blue .postcard__title:hover {
-  color: #0076bd;
+  color: #3772FF;
 }
 
 .blue .postcard__bar {
-  background-color: #0076bd;
+  background-color: #3772FF;
 }
 
 .blue::before {
-  background-image: linear-gradient(-30deg, rgba(0, 118, 189, 0.1), transparent 50%);
+  background-image: linear-gradient(-30deg, rgba(55, 114, 255, 0.1), transparent 50%);
 }
 
 .blue:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, rgba(0, 118, 189, 0.1), transparent 50%);
+  background-image: linear-gradient(30deg, rgba(55, 114, 255, 0.1), transparent 50%);
 }
 
 .red .postcard__title:hover {
@@ -236,19 +249,19 @@ a, a:hover {
 }
 
 .yellow .postcard__title:hover {
-  color: #bdbb49;
+  color: #FFA630;
 }
 
 .yellow .postcard__bar {
-  background-color: #bdbb49;
+  background-color: #FFA630;
 }
 
 .yellow::before {
-  background-image: linear-gradient(-30deg, rgba(189, 187, 73, 0.1), transparent 50%);
+  background-image: linear-gradient(-30deg, rgba(255, 166, 48, 0.1), transparent 50%);
 }
 
 .yellow:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, rgba(189, 187, 73, 0.1), transparent 50%);
+  background-image: linear-gradient(30deg, rgba(255, 166, 48, 0.1), transparent 50%);
 }
 
 @media screen and (min-width: 769px) {
@@ -259,10 +272,10 @@ a, a:hover {
     background-image: linear-gradient(80deg, rgba(121, 221, 9, 0.1), transparent 50%);
   }
   .blue::before {
-    background-image: linear-gradient(-80deg, rgba(0, 118, 189, 0.1), transparent 50%);
+    background-image: linear-gradient(-80deg, rgba(55, 114, 255, 0.1), transparent 50%);
   }
   .blue:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(0, 118, 189, 0.1), transparent 50%);
+    background-image: linear-gradient(80deg, rgba(55, 114, 255, 0.1), transparent 50%);
   }
   .red::before {
     background-image: linear-gradient(-80deg, rgba(189, 21, 11, 0.1), transparent 50%);
@@ -271,10 +284,10 @@ a, a:hover {
     background-image: linear-gradient(80deg, rgba(189, 21, 11, 0.1), transparent 50%);
   }
   .yellow::before {
-    background-image: linear-gradient(-80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+    background-image: linear-gradient(-80deg, rgba(255, 166, 48, 0.1), transparent 50%);
   }
   .yellow:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+    background-image: linear-gradient(80deg, rgba(255, 166, 48, 0.1), transparent 50%);
   }
 }
 /*# sourceMappingURL=card.css.map */
